@@ -1,0 +1,1 @@
+scp sn:/data/experiments/2013_10_combined_NPC_somatic_mutation_calls/mutational_signatures/mutation*pdf . 
