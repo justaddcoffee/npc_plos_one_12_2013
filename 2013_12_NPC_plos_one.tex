@@ -24,10 +24,11 @@
 
 \usepackage{color} 
 
+\usepackage{pdfpages}
+
 % Use doublespacing - comment out for single spacing
 %\usepackage{setspace} 
 %\doublespacing
-
 
 % Text layout
 \topmargin 0.0cm
@@ -111,7 +112,6 @@ $\ast$ E-mail: jason.mulvenna@qimr.edu.au
 % Do NOT remove this, even if you are not including acknowledgments
 \section*{Acknowledgments}
 
-
 %\section*{References}
 % The bibtex filename
 \bibliography{template}
@@ -124,7 +124,7 @@ $\ast$ E-mail: jason.mulvenna@qimr.edu.au
 \includegraphics[width=4in]{figure1/figure1.eps}
 \end{center}
 \caption{
-{\bf Bold the first sentence.}  Rest of figure 2  caption.  Caption 
+{\bf Foobar.}  Rest of figure 2  caption.  Caption 
 should be left justified, as specified by the options to the caption 
 package.
 }
@@ -134,16 +134,20 @@ package.
 \subsection*{Figure 2}
 \begin{figure}[!ht]
 \begin{center}
+\ifpdf
+% \includepdf[pages={1},scale=0.5]{figure2/figure2.pdf}
+\includegraphics[width=6in]{figure2/figure2.pdf}
+\else
 \includegraphics[width=6in]{figure2/mutation_signature.15.30.48_November_05_2013.eps}
+\fi
 \end{center}
 \caption{
-{\bf Bold the first sentence.}  Rest of figure 2  caption.  Caption 
+{\bf Mutational signature of somatic mutations generated using NPC tumor/normal pair.}  Rest of figure 2  caption.  Caption 
 should be left justified, as specified by the options to the caption 
 package.
 }
-\label{Figure_label}
+\label{Figure_label2}
 \end{figure}
-
 
 \section*{Tables}
 %\begin{table}[!ht]
